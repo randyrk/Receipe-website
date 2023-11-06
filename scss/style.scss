@@ -1,0 +1,57 @@
+@use 'reset' as *;
+@use 'utilities' as *;
+@use 'layouts' as *;
+@use 'abstracts' as *;
+
+.section_head{
+    @include regular-flex(column);
+    @include page_header($prime-color,#f5f2f0);
+    text-align: center;
+    column-gap: $p_two;
+    padding: $p_two - 0.1 0;
+    margin: $p_one * 6 auto 0;
+
+    p{
+        width: 70%;
+        font-size: $p_one;
+        line-height: $p_one + .5;
+    }
+}
+
+
+.receipe_images{
+    @include regular-grid(4,3rem,1.5rem);
+    width: 100%;
+    margin: $p_two 0;
+}
+
+
+.grid_columns{
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+
+    &:hover{
+        opacity: 0.5;
+    }
+
+    a{
+        margin-right: $p_one * 5;
+    }
+}
+
+.recipe-count,.recipe-title{
+    color: $prime-color;
+    text-align: center;
+}
+
+.recipe-count,img{
+    display: block;
+}
+
+.recipe-count{
+    font-size: $p_one;
+}
+
+.recipe-title{
+    font-size: $p_one + .25;
+}

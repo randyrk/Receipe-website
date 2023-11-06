@@ -1,0 +1,82 @@
+@use 'layouts' as *;
+@use 'reset';
+@use 'utilities' as *;
+@use 'abstracts' as *;
+
+main{
+    margin: 7rem 15% 0;
+}
+
+.content{
+    @include regular-grid(2);
+    justify-content: initial;
+    align-items: initial;
+}
+
+.left{
+  @include flex-dir(column);
+  margin-right: 40%;
+
+  p{
+    color: #505050;
+  }
+
+}
+
+.description{
+    @include flex-dir;
+    padding: $p_two 0;
+
+    :nth-child(1){
+        padding-left: 0;
+    }
+}
+
+.right img{
+    margin: $p_one 0 $p_one *5 0;
+    width: 90%;
+}
+
+.items-d{
+    @include regular-flex(column);
+    justify-content: center;
+    font-weight: 300;
+    font-size: $p_one + .1;
+    padding: $p_one $p_two + 1;
+    border-left: solid 1px #383838;
+
+    p:nth-child(1){
+      font-size: $p_one * 4;
+    }
+}
+
+.button{
+    background-color:$primary-color;
+    padding: $p_one;
+    border-radius: $p_two;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+}
+
+.header{
+    @include flex-dir;
+    justify-content: space-between;
+}
+
+.con{
+    margin: $p_one * 3;
+}
+
+.content-2_items{
+    padding-top: $p_one + .6;
+
+    .items_2{
+        @include flex-dir;
+        padding-top: $p_one + .3;
+
+        p{
+            padding-left: 8px;
+        }
+    }
+}

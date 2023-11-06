@@ -1,0 +1,36 @@
+@use '../utilities' as *;
+@use '../abstracts' as *;
+
+
+.nav{
+    @include regular-flex;
+    background-color:$primary-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: $p_one $p_two;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    column-gap: $p_two;
+
+    .logo{
+       font: {
+         size: $p_two;
+         weight:weight-5;
+       }
+    }
+
+    &-links{
+        @include regular-flex;
+        justify-content: initial;
+        font-size: inherit;
+        column-gap: $p_two;
+    }
+
+    a{
+        color: #fff;
+    }
+
+}

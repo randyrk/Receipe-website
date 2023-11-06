@@ -1,0 +1,47 @@
+.container{
+    margin: 0 10%;
+}
+
+@mixin flex-dir($flex_dir:row){
+  display: flex;
+  flex-direction: $flex_dir;
+}
+
+@mixin regular-flex($flex_dir:row){
+    display: flex;
+    flex-direction: $flex_dir;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin regular-grid($col:1,$col-gap:0,$row-gap:0){
+   display: grid;
+   grid-template-columns: repeat($col,1fr);
+   justify-content: space-around;
+   align-items: space-around;
+   column-gap: $col-gap;
+   row-gap: $row-gap;
+}
+
+/*
+@mixin compressed-grid($lines...) {
+    display: grid;
+  
+    @each $line in $lines {
+      @if $line == 1 {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      @else if $line == 2 {
+        justify-content: space-around;
+      }
+      @else if $line == 3 {
+        align-items: space-around;
+      }
+      @else if $line == 4 {
+        column-gap: 10px; 
+      }
+      @else if $line == 5 {
+        row-gap: 10px; 
+      }
+    }
+  }*/

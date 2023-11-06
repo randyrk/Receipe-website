@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  margin: 0 10%;
+}
+
+/*
+@mixin compressed-grid($lines...) {
+    display: grid;
+
+    @each $line in $lines {
+      @if $line == 1 {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      @else if $line == 2 {
+        justify-content: space-around;
+      }
+      @else if $line == 3 {
+        align-items: space-around;
+      }
+      @else if $line == 4 {
+        column-gap: 10px; 
+      }
+      @else if $line == 5 {
+        row-gap: 10px; 
+      }
+    }
+  }*/
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4a98f7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  column-gap: 2rem;
+}
+.nav .logo {
+  font-size: 2rem;
+  font-weight: weight-5;
+}
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: initial;
+  font-size: inherit;
+  column-gap: 2rem;
+}
+.nav a {
+  color: #fff;
+}
+
+.section_head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  background-color: #f5f2f0;
+  text-align: center;
+  column-gap: 2rem;
+  padding: 1.9rem 0;
+  margin: 6rem auto 0;
+}
+.section_head p {
+  width: 70%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.receipe_images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-around;
+  align-items: space-around;
+  column-gap: 3rem;
+  row-gap: 1.5rem;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.grid_columns {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.grid_columns:hover {
+  opacity: 0.5;
+}
+.grid_columns a {
+  margin-right: 5rem;
+}
+
+.recipe-count, .recipe-title {
+  color: #000;
+  text-align: center;
+}
+
+.recipe-count, img {
+  display: block;
+}
+
+.recipe-count {
+  font-size: 1rem;
+}
+
+.recipe-title {
+  font-size: 1.25rem;
+}
+
+img {
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+img:hover {
+  transform: scale(1.3);
+}
+
+.grid_columns:hover {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=collections.css.map */
